@@ -3,7 +3,7 @@ public class GradeCalculator
   public static void main(String[] args)
   {
     String courseName = ("Linear Algebra");
-    int averageMinutes = 10068;
+    int weeklyMinutesSpent = 10068;
     int firstHwrade = 96;
     int secondHwGrade = 94;
     int thirdHwGrade = 99;
@@ -18,13 +18,15 @@ public class GradeCalculator
     double finalGrade = ((int)((hwAvg * 35) + (quizAvg * 10) + (finalExam * 50)) / 100);
     
     System.out.println("Course Name: " + courseName);
+    System.out.println("Minutes spent in a week: " + (weeklyMinutesSpent));
+    System.out.println("hours spent in a week: " + ( ((weeklyMinutesSpent/60)) + (weeklyMinutesSpent % 60) ));
     System.out.println("Average homework grade: " + hwAvg);
     System.out.println("Average Quiz grade: " + quizAvg);
     System.out.println("overall grade: " + finalGrade);
     
     if (finalGrade < 50)
     {
-      System.out.println("how tf did you spend " + averageMinutes + " minutes and still fail");
+      System.out.println("how tf did you spend " + weeklyMinutesSpent + " minutes and still fail");
     }
   }
 }
